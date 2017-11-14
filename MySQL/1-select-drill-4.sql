@@ -117,7 +117,7 @@ VALUES
 
 
     -- Sur ce nouveau SQLFiddle, trouve la fonction permettant de n'afficher que l'année ET le mois de la colonne "birthdate" et affiche le prénom de tous les octocts et leur année de naissance. (indice: comment dit-on "année" en anglais?)
-    Réponse 5 = SELECT firstname,YEAR(birthdate),MONTH(birthdate) MAX(birthdate)  FROM octocats ;
+    Réponse 5 = SELECT firstname,YEAR(birthdate),MONTH(birthdate) FROM octocats ;
 
 
 -- Sur le sqlfiddle bac à sable de Météo:
