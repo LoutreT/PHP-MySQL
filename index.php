@@ -22,7 +22,7 @@ while ($donnees = $resultat->fetch())
   echo '<br/>';
   echo $donnees['employee_id'];
   echo ' : ';
-  echo $donnees['description'];
+  echo $donnees['title'];
 }
  var_dump($donnees);
 
