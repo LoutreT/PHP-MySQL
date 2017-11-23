@@ -9,19 +9,21 @@ catch(Exception $e)
     // En cas d'erreur, on affiche un message et on arrête tout
         die('Erreur : '.$e->getMessage());
 }
-$query = 'INSERT INTO categories (nom, description) VALUES (?, ?);';
+$query = 'INSERT INTO employees (employee_id, title) VALUES (1, super);';
+$query='SELECT* FROM classes;';
 $prep = $pdo->prepare($query);
  
 $prep->bindValue(1, 'bertand', PDO::PARAM_STR);
 $prep->bindValue(2, 'ceci est un test pour desc', PDO::PARAM_STR);
 $prep->execute();
-$resultat = $pdo->query('SELECT * FROM categories');
+$resultat = $pdo->query('SELECT * FROM employees');
 while ($donnees = $resultat->fetch())
 {
   echo '<br/>';
-  echo $donnees['nom'];
+  echo $donnees['employee_id'];
   echo ' : ';
   echo $donnees['description'];
 }
+ var_dump($donnees);
 
 ?>
